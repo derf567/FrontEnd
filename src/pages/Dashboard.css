@@ -1,24 +1,45 @@
 .logo{
     position: absolute;
     width: 10%;
-    top: 10%;
+    top: 5%;
     left: 2%;
 }
 .Header{
     position: absolute;
     left: 18%;
-    top: 13%;
+    top: 8%;
 }
+.event{
+    position: absolute;
+    left: -25%;
+    top: 30%;
+}
+.intrams{
+    position: absolute;
+    left: 38%;
+    top: 50%;
+}
+.ccs{
+    position: absolute;
+    left: 38%;
+    top: 60%;
+}.cnight{
+    position: absolute;
+    left: 38%;
+    top: 70%;
+}
+
 .addnew{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 2%;
 }
 
 .dash{
     position: absolute;
-    top: 50%;
+    top: 39%;
     left: 2%;
+   
 }
 .insidethe-addnew{
     border: none;
@@ -34,48 +55,42 @@
     top: 290px;
 }
 .card {
-    /* Add styles for the card container */
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
 }
 #Button1 {
     width: 100px;
     position: absolute;
 }
 .card2 {
-    /* Add styles for the card container */
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 55%;
 
 }
   .card3 {
-    /* Add styles for the card container */
     position: absolute;
     top: 70%;
-    left: 50%;
+    left: 55%;
 
 }
 .card4 {
-    /* Add styles for the card container */
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 70%;
 
 }
 .card5 {
-    /* Add styles for the card container */
     position: absolute;
     top: 60%;
-    left: 60%;
+    left: 70%;
 
 }
   .card6 {
-    /* Add styles for the card container */
     position: absolute;
     top: 70%;
-    left: 60%;
+    left: 70%;
 
 }
 .Profile1{
@@ -83,3 +98,178 @@
     left: 1500px;
     top: 50px;
 }
+.calendarhead {
+    position: absolute;
+    left: 18%;
+    top: 8%;
+  }
+  
+  .Calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    left: 50%; 
+    transform: translateX(35%); 
+    
+  }
+  
+  .Calendar-container .p-calendar {
+    width: 400px; 
+    height: 360px; 
+  }
+  .events{
+    margin-left: 75%;
+    margin-top: 1%;
+    color:#443838
+
+  }.flex.flex-wrap.gap-2.mb-4 {
+    margin-top: -2.5%;
+    margin-left: 84.5%; 
+    width: 15%;
+  }
+  
+  .p-tree-toggler,
+  .p-treenode-label {
+    font-size: 12px; 
+  }
+  
+  .p-treeselect {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-left: 5%; 
+    margin-top: 5%;
+    width: 200px; 
+  }
+  
+  .w-full.md\:w-30rem {
+    width: 380px;
+    margin-left: 75%;
+    margin-top: 2%;
+
+  }
+  
+  .pink-box {
+  position: absolute;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 1200px; 
+  height: 750px; 
+  background-color: #D2334C;
+  border-radius: 10px; 
+  overflow: hidden; 
+  }
+  .generate{
+    margin-left: 6%;
+    margin-top: 2%;
+    color:white
+  
+  }
+  .inner-box {
+    position: relative;
+    width: 95%; 
+    height: 85%; 
+    background-color: #ffffff; 
+    margin: 20px auto; 
+    border-radius: 8px; 
+  }
+  .text{
+    position:absolute;
+    margin-left: 89px;
+    margin-top: 50px;
+  }.insidewt,
+  .insidewt2,
+  .insidewt3,
+  .insidewt4 {
+    width: 18%;
+    height: 27%;
+    background-color: #D2334C;
+    margin: 20px auto;
+    border-radius: 8px;
+    position: absolute;
+  }
+  
+  .insidewt { margin-left: 8%; margin-top: 9%; }
+  .insidewt2 { margin-left: 38%; margin-top: 9%; }
+  .insidewt3 { margin-left: 68%; margin-top: 9%; }
+  .insidewt4 { margin-left: 8%; margin-top: 39%; }
+  
+  .down{
+    position: absolute;
+    left: 90px;
+    top: 350px;
+
+  }.textintrams{
+    margin-top: 18%;
+    margin-left: 15%;
+    color: #ffffff;
+
+  }.icon{
+    margin-top: -15%;
+    margin-left: 59%;
+  
+
+  }.num1{
+    margin-top: -25%;
+    margin-left: 12%;
+    color: #ffffff;
+
+  }.CNght{
+    margin-top: 18%;
+    margin-left: 15%;
+    color: #ffffff;
+
+  }.iconn{
+    margin-top: -15%;
+    margin-left: 59%;
+  
+
+  }.num2{
+    margin-top: -25%;
+    margin-left: 12%;
+    color: #ffffff;
+  }
+
+  .CDays{
+    margin-top: 18%;
+    margin-left: 15%;
+    color: #ffffff;
+
+  }.iconnn{
+    margin-top: -15%;
+    margin-left: 59%;
+  
+
+  }.num3{
+    margin-top: -25%;
+    margin-left: 12%;
+    color: #ffffff;
+
+  }
+
+  .Break{
+    margin-top: 12%;
+    margin-left: 6%;
+    color: #ffffff;
+    font-size: 89%;
+
+  }.iconnnn{
+    margin-top: -15%;
+    margin-left: 59%;
+  
+
+  }.num4{
+    margin-top: -23%;
+    margin-left: 12%;
+    color: #ffffff;
+
+  }.About{
+    position: absolute;
+    left: 30%;
+    top: 18%;
+    color:#443838
+    
+
+
+  }

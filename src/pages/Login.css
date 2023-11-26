@@ -21,9 +21,7 @@
   
 }
 .navbar{
-  
-  
-  border: none;
+border: none;
   
  
 }
@@ -39,56 +37,52 @@
   color: #e65b7a;
 }
 
-.main-title{
+/*.main-title{
 
   position: absolute; 
   z-index: 1;
-  top: 30%; /* Position it vertically at 50% from the top */
+  top: 20%; /* Position it vertically at 50% from the top 
   left:55%; /* Position it horizontally at 50% from the left */
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);
   width: 200px;
   font-size: 30px;
   font-weight: 100;
-
-}
-
+  
+}*/
 
 .Id-box{
   position: absolute; 
   z-index: 1;
-  top: 33%; /* Position it vertically at 50% from the top */
-  left: 55%; /* Position it horizontally at 50% from the left */
-  transform: translate(-50%, -50%); /* Center the component both vertically and horizontally */
-  
+  top: 35%; 
+  left: 46%; 
+  transform: translate(-50%, -50%); 
+  width: 200px;
   margin-top: 100px;   
+ 
 
 }
 .inside-box{
   width: 200%;
-  
 }
-
 .name-box{
   position: absolute; 
   z-index: 1;
-  top: 51%; /* Position it vertically at 50% from the top */
-  left: 55%; /* Position it horizontally at 50% from the left */
-  transform: translate(-50%, -50%); /* Center the component both vertically and horizontally */
+  top: 51%; 
+  left: 55%; 
+  transform: translate(-50%, -50%); 
    
-
 }
 .inside-name{
   width: 200%;
   
 }
 
-
 .email-box{
   position: absolute; 
   z-index: 1;
-  top: 58%; /* Position it vertically at 50% from the top */
-  left: 55%; /* Position it horizontally at 50% from the left */
-  transform: translate(-50%, -50%); /* Center the component both vertically and horizontally */
+  top: 58%; 
+  left: 55%; 
+  transform: translate(-50%, -50%); 
 
 }
 
@@ -99,18 +93,16 @@
 .password-box{
   position: absolute; 
   z-index: 1;
-  top: 65%; /* Position it vertically at 50% from the top */
-  left: 55%; /* Position it horizontally at 50% from the left */
+  top: 53%; 
+  left: 56.5%; 
   transform: translate(-50%, -50%);
+  width: 500px;
 }
 
 .inside-password{
   width: 200;
 
 }
-
-
-
 #username{
 
   margin-top: -8px;
@@ -119,4 +111,70 @@
 #password{
   
   margin-top: -8px;
+}
+.logo{
+  position: absolute;
+  width: 10%;
+  top: 5%;
+  left: 2%;
+
+}
+.app-container1 {
+  position: relative;
+}
+
+.back {
+  width: 100%; 
+  height: auto; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+.background-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #ffffff; 
+}
+
+.text-container {
+  text-align: center;
+}
+body {
+  overflow: hidden;
+}.center-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; 
+  height: 500px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 1px solid #ccc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  padding: 20px; 
+}
+#login-button{
+  margin-top: 600px;
+  margin-left: 860px;
+  width: 150px; 
+  height: 40px; 
+  background-color: #D2334C; 
+  border-color: #D2334C; 
+
+  
+}
+.userr{
+  width: 200px; 
+  height: auto;
+  position: absolute;
+  top: 200px; 
+  left: 850px; 
+  z-index: 2; 
+
 }

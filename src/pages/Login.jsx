@@ -8,7 +8,10 @@ import { InputText } from "primereact/inputtext";
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { useState } from 'react'
+import  back from './img/back.jpg';
+import  userr from './img/userr.png';
 import {useNavigate} from 'react-router-dom';
+
 
 
 
@@ -55,14 +58,27 @@ function Login() {
       
     return(
         <>
+        <img className='back' src={back} alt="" />
+        <img className='userr' src={userr} alt="" />
+        
+          <div className="center-container">
+          {/* white background*/}
+           </div>
+        
+        
         <div className="app-container1">
-    
+
         <div className="new-component">
           <Menubar className='navbar' model={items} />
         </div>
     
-          <p className='main-title'> Login to your account</p>
-        
+         <div class="background-container">
+          <div class="text-container">
+           
+            </div>
+            </div>
+            
+        {/* <p className='main-title'> Login to your account</p> */}
           
             <div className="Id-box">
                 <span className="p-float-label">
@@ -70,19 +86,8 @@ function Login() {
                     <label id ="username">ID Number</label>
                 </span>
             </div>
-            <div className="name-box">
-                <span className="p-float-label">
-                    <InputText className="inside-name" value={valueName} onChange={(e) => setName(e.target.value)} />
-                    <label id="username">Student Name</label>
-                </span>
-            </div>
-    
-            <div className="email-box">
-                <span className="p-float-label">
-                    <InputText className="inside-email" value={valueEmail} onChange={(e) => setEmail(e.target.value)} />
-                    <label id="username">Email Address</label>
-                </span>
-            </div>
+           
+          
     
             <div className="password-box">
                 <span className="p-float-label">
@@ -90,12 +95,15 @@ function Login() {
                     <label id="password">Password</label>
                 </span>
             </div>
-            <Button onClick={handleloginClick} id='login-button' label="Login" severity="help" rounded />
-            <Button id='Signup-button' label="Signup" severity="help" rounded />
-            
+          
+ 
+          
+          <Button onClick={handleloginClick} id='login-button'label="Login"severity="help"box style={{ backgroundColor: '#D2334C',borderColor: '#D2334C', }}  />
             
     
         </div>
+
+        
        
     
          
