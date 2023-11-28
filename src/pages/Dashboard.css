@@ -6,7 +6,7 @@
 }
 .Header{
     position: absolute;
-    left: 18%;
+    left: 16%;
     top: 8%;
 }
 .event{
@@ -62,6 +62,8 @@
 #Button1 {
     width: 100px;
     position: absolute;
+    background-color: #D2334C;
+  color: #ffffff;
 }
 .card2 {
     position: absolute;
@@ -79,6 +81,7 @@
     position: absolute;
     top: 50%;
     left: 70%;
+    
 
 }
 .card5 {
@@ -93,14 +96,11 @@
     left: 70%;
 
 }
-.Profile1{
-    position: absolute;
-    left: 1500px;
-    top: 50px;
-}
+
+
 .calendarhead {
     position: absolute;
-    left: 18%;
+    left: 16%;
     top: 8%;
   }
   
@@ -266,10 +266,256 @@
 
   }.About{
     position: absolute;
-    left: 30%;
-    top: 18%;
+    left: 26%;
+    top: 11%;
     color:#443838
     
+  }.per{
+    position: absolute;
+    left: 24%;
+    top: 19%;
+
+  }.team{
+    position: absolute;
+    left: 48%;
+    top: 43%;
+    color:#443838
+
+  }.gab{
+    position: absolute;
+    width: 8%;
+    top: 50%;
+    left: 33%;
+}.line1 {
+    position: absolute;
+    top: 54%;
+    left: 43%;
+    color:#443838
+  
+}.line2{
+  position: absolute;
+  top: 57%;
+  left: 43%;
+  color:#443838
+}
+  .micah{
+    position: absolute;
+    width: 8%;
+    top: 73%;
+    left: 33%;
+  }.line3{
+    position: absolute;
+    left: 43%;
+    top:76%;
+    color:#443838
+  }.line4{
+    position: absolute;
+    left: 43%;
+    top:79%;
+    color:#443838
+
+
+  }
+  
+  .fred{
+    position: absolute;
+    width: 8%;
+    top: 50%;
+    left: 66%;
+  }.line5{
+    position: absolute;
+    left: 75%;
+    top:54%;
+    color:#443838
+
+  }.line6{
+    position: absolute;
+    left: 75%;
+    top:58%;
+    color:#443838
+
+  }
+  .tan{
+    position: absolute;
+    width: 8%;
+    top: 73%;
+    left: 66%;
+  }.line7{
+    position: absolute;
+    left: 75%;
+    top:76%;
+    color:#443838
+
+  }.line8{
+    position: absolute;
+    left: 75%;
+    top:79%;
+    color:#443838
+
+  }.userr{
+    position: absolute;
+    width: 4%;
+    top: 3.5%;
+    left: 81%;
+
+  
+  }.logout{
+    position: absolute;
+    top: 5%;
+    left: 86%;
+
+  }.pink{
+    position: absolute;
+    top: 45%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    height: 505px; 
+    background-color: #D2334C;
+    border-radius: 10px; 
+    overflow: hidden; 
+
+
+  }.gen{
+    margin-left: 6%;
+    margin-top: 2%;
+    color:white
+
+  }.apple{
+    position: relative;
+    width: 93%; 
+    height: 74%; 
+    background-color: #ffffff; 
+    margin: 20px auto; 
+    border-radius: 8px; 
+  }.evnme{
+    position: absolute;
+    margin-top: 8% ;
+    margin-left: 8%;
+  }.mango{
+    position:absolute;
+    margin-top: 17% ;
+    margin-left: 8%;
+
+  
+  }.milk{
+    position:absolute;
+    margin-top: 27% ;
+    margin-left: 9%;
+
+  }.loc{
+    position: absolute;
+    margin-top: 61px ;
+    margin-left: 390px;
+    
+
+  }.dep{
+    position:absolute;
+    margin-top: 130px ;
+    margin-left: 390px;
+
+  }.yum{
+    position: absolute;
+    margin-top: -66% ;
+    margin-left: 180%;
+  }
+  .searchh{
+    position: absolute;
+    margin-top: -45% ;
+    margin-left: 120%;
+  }.oums{
+    position: absolute;
+    margin-top: -45% ;
+    margin-left: 137%;
+  }.loc1{
+    position: absolute;
+    margin-left: 115px;
+    margin-top: -40px;
+
+  }.save{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -10px;
+  }.customButton {
+    background-color: #D2334C;
+    border: 2px solid  #ffffff;
+    color: #ffffff; /* Optional: Change text color if needed */
+    width: 100px;
+  }.cancel{
+    position: absolute;
+    margin-left: 699px;
+    margin-top: -450px;
+
+  }
+  
+  
+  .customCancelButton{
+    background-color: #D2334C;
+    color: #ffffff;
+    border: 2px solid  #ffffff;
+
+  }.word{
+    position: absolute;
+    left: 25%;
+    top: 45%;
+
+  }.ivy{
+  position: absolute;
+  top: 33%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 1180px; 
+  height: 225px; 
+  background-color: #D2334C;
+  border-radius: 10px; 
+  overflow: hidden;
+  }.girl{
+    position: absolute;
+    width: 28%;
+    top: 3%;
+    left: 50%;
+
+  }.Hi{
+    margin-left: 13%;
+    margin-top: 3%;
+    color:white;
+    font-size: 50px;
+    
+
+  }.day{
+    margin-left: 13%;
+    margin-top: -2%;
+    color:white;
+    font-size: 26px;
+
+  }.Thurs{
+    margin-left: 2%;
+    margin-top: -5%;
+    color:#D2334C;
+
+  }.no{
+    position: absolute;
+    margin-left: 19.6%;
+    margin-top: 6.7%;
+   
+
+  }.sat{
+    margin-left: 2%;
+    margin-top: -5%;
+    color:#D2334C;
+
+  }.luv{
+    position: absolute;
+    margin-left: 19.6%;
+    margin-top: -3.2%;
+    
+
+  }.close{
+    position: absolute;
+    color:white;
+    margin-top: -2% ;
+    margin-left: 60%;
+ 
 
 
   }
