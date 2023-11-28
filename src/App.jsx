@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      
+      <a href="/Login" class="btn small">Click me</a>
     </>
   )
 }
