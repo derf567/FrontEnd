@@ -59,7 +59,7 @@ function Login() {
     return(
         <>
         <img className='back' src={back} alt="" />
-        <img className='userr' src={userr} alt="" />
+        <img className='user' src={userr} alt="" />
         
           <div className="center-container">
           {/* white background*/}
