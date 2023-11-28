@@ -1,2 +1,4 @@
-[build]
-    public = "."
+[[redirects]]
+from = "/*"
+to = "/App.jsx"
+status = 200
