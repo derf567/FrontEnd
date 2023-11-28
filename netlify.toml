@@ -1,4 +1,13 @@
+[build]
+    public ="dist"
+
+[dev]
+    public = "dist"
+    command = "npm run serve"
+
 [[redirects]]
-from = "/*"
-to = "/App.jsx"
-status = 200
+    from = "*"
+    to = "/not-found"
+    status = 404
+
+
