@@ -4,6 +4,7 @@ import App from './App.jsx'
 
 import './pages/Login.jsx'
 import './pages/Dashboard.jsx'
+import Log from './Log.jsx'
 
 
 import {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/Dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/Log",
+    element: <Log />,
   },
 
   
