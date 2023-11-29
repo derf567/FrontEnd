@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { PrimeIcons } from 'primereact/api';
 import { Menu } from 'primereact/menu';
 import 'primereact/resources/themes/saga-blue/theme.css';
@@ -14,7 +14,6 @@ import fred from './img/fred.png';
 import tan from './img/tan.png';
 import userr from './img/userr.png';
 import girl from './img/girl.png';
-
 import { Calendar } from 'primereact/calendar';
 import { Tree } from 'primereact/tree';
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
@@ -23,6 +22,9 @@ import { Column } from 'primereact/column';
 import { TieredMenu } from 'primereact/tieredmenu';
 import { InputText } from 'primereact/inputtext';
 import { MultiSelect } from 'primereact/multiselect';
+import React, { useState, useEffect } from 'react';
+import { DataScroller } from 'primereact/datascroller';
+        
 
         
         
@@ -45,7 +47,7 @@ function Dashboard() {
   
   
     {/* Inplace */}
-  const products = [
+  const initialProducts = [
     { code: '001', name: 'Product 1', category: 'Category 1', quantity: 10 },
     { code: '002', name: 'Product 2', category: 'Category 2', quantity: 15 },
   ];
@@ -196,7 +198,6 @@ function Dashboard() {
    
   ];
   
-  const [selectedCitiess, setSelectedCitiess] = useState([]);
 
 
 
@@ -312,25 +313,20 @@ function Dashboard() {
           </div>
 
           <div className ='loc'>
-          <h4>Department:</h4>
-          <div className='loc1'> 
-           <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={cities} optionLabel="name" 
-            placeholder="Select Department " maxSelectedLabels={3} className="w-full md:w-20rem" />
-          </div>
-          </div>
-     
-        
+  <h4>Department:</h4>
+  <div className='loc1'> 
+    <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={cities} optionLabel="name" 
+      placeholder="Select Department " maxSelectedLabels={3} className="w-full md:w-20rem" />
+  </div>
+</div>
 
- 
-
-          <div className='dep'>
-            <h4>Location:</h4>
-            <div className='loc1'> 
-           <MultiSelect value={selectedCitiess} onChange={(e) => setSelectedCitiess(e.value)} options={location} optionLabel="name" 
-            placeholder="Select Location " maxSelectedLabels={3} className="w-full md:w-20rem" />
-          </div>
-
-          </div>
+<div className='dep'>
+  <h4>Location:</h4>
+  <div className='loc1'> 
+    <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={location} optionLabel="name" 
+      placeholder="Select Location " maxSelectedLabels={3} className="w-full md:w-20rem" />
+  </div>
+</div>
           
             
 
@@ -391,20 +387,58 @@ function Dashboard() {
       <h1>Dashboard</h1>
       <h4 className='Thurs'>Thursday</h4>
       
+      
       </div>
+       {/* 
       <div className='no'>
       <h4>, 02 November 2023</h4>
+      </div>  */}
+       
+      <div class="custom-box">
+      <div className='plan'>
+        <p>Acitvity Plan</p>
       </div>
-    
 
-      <div className='ivy'>
-      <h1 className='Hi'>Hi, Shenna</h1>
-      <p className='day'>Ready to start your day?</p>
-
+      <div className='play1'>
+        <p>Intramurals</p>
       </div>
-      <img className='girl' src={girl} alt="" />
+
+        <div className="card flex justify-content-center">
+            <Button id='Button1' label="Open" severity="danger" />
+          </div>
+          <div className="card2 flex justify-content-center">
+            <Button id='Button1' label="Open" severity="danger" />
+          </div>
+          <div className="card3 flex justify-content-center">
+            <Button id='Button1' label="Open" severity="danger" />
+          </div>
+          <div className="card4 flex justify-content-center">
+            <Button className="Button4" label="Start Event" severity="danger" />
+          </div>
+          <div className="card5 flex justify-content-center">
+            <Button className="Button5" label="Start Event" severity="danger" />
+          </div>
+          <div className="card6 flex justify-content-center">
+            <Button className="Button6" label="Start Event" severity="danger" />
+          </div>
+
+         
+
+         
+         
+
+      
+   
+      </div>
+
+      <div class="custom-box2">
+   
+      </div>
+      
 
 
+
+     {/* 
      
       <div className='word'> 
       <p>Events</p>
@@ -445,6 +479,8 @@ function Dashboard() {
           <div className="card6 flex justify-content-center">
             <Button className="Button6" label="Start Event" severity="danger" />
           </div>
+
+        */}
           
 
 
