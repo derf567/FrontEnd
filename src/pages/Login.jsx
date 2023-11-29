@@ -20,7 +20,7 @@ import {useNavigate} from 'react-router-dom';
 function Login() {
 
     const navigate = useNavigate();
-  const handleloginClick = () => navigate('/');
+  const handleloginClick = () => navigate('/Dashboard');
 
     const items = [
         {
@@ -98,7 +98,9 @@ function Login() {
           
  
           
-          <Button onClick={handleloginClick} id='login-button'label="Login"severity="help"box style={{ backgroundColor: '#D2334C',borderColor: '#D2334C', }}  />
+          <Button onClick={handleloginClick} id='login-button'label="Login"severity="help"box style={{ backgroundColor: '#D2334C',borderColor: '#D2334C', }}
+            
+          />
             
     
         </div>
