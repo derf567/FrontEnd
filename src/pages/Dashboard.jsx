@@ -45,6 +45,10 @@ function Dashboard() {
   const [isInplaceOpen, setIsInplaceOpen] = useState(false);   {/* Inplace */}
   const [value, setValue] = useState('');
   
+  const products = [
+    { code: '001', name: 'Product 1', category: 'Category 1', quantity: 10 },
+    // Add more product data as needed
+  ];
   
     {/* Inplace */}
   const initialProducts = [
@@ -536,115 +540,49 @@ function Dashboard() {
 
 
 
-      {isGenerateReportsClicked && (
-        <>
-       <img className='userr' src={userr} alt="" />
-     
-      <div className='logout'>
+{isGenerateReportsClicked && (
+  <>
+    <img className='userr' src={userr} alt="" />
+  
+    <div className='logout'>
       <TieredMenu model={items} breakpoint="767px" />
-      </div>
-     {/* Your content for the Generate Reports button goes here */}
- 
-     <div className="pink-box">
-     <div className='generate'>
-     <h2>Generate Reports</h2></div>
-     
-     <div className="inner-box">
-      <p className='text'>Recent Activities</p>
-    
-
-      <div className='insidewt'>
-       <p className='textintrams'>Intramural</p> 
-       <img className='icon' src={icon} alt="" />
-       <h1 className='num1'>5,900</h1>
-       
-       <Inplace onOpen={onOpen}>
-        <InplaceDisplay>View Data</InplaceDisplay>
-        <InplaceContent>
-          <DataTable value={products}>
-            <Column field="code" header="Code" />
-            <Column field="name" header="Name" />
-            <Column field="category" header="Category" />
-            <Column field="quantity" header="Quantity" />
-          </DataTable>
-        </InplaceContent>
-      </Inplace>
-
-
-
-      </div>
-
-      <div className='insidewt2'> 
-      <p className='CNght'>CCS Nights</p> 
-       <img className='iconn' src={icon} alt="" />
-       <h1 className='num2'>500</h1>
-      
-      <Inplace onOpen={onOpen}>
-        <InplaceDisplay>View Data</InplaceDisplay>
-        <InplaceContent>
-          <DataTable value={products}>
-            <Column field="code" header="Code" />
-            <Column field="name" header="Name" />
-            <Column field="category" header="Category" />
-            <Column field="quantity" header="Quantity" />
-          </DataTable>
-        </InplaceContent>
-      </Inplace>
-      
-      
-      </div>
-      <div className='insidewt3'> 
-      <p className='CDays'>College Days</p> 
-       <img className='iconnn' src={icon} alt="" />
-       <h1 className='num3'>3000</h1>
-      
-      <Inplace onOpen={onOpen}>
-        <InplaceDisplay>View Data</InplaceDisplay>
-        <InplaceContent>
-          <DataTable value={products}>
-            <Column field="code" header="Code" />
-            <Column field="name" header="Name" />
-            <Column field="category" header="Category" />
-            <Column field="quantity" header="Quantity" />
-          </DataTable>
-        </InplaceContent>
-      </Inplace>
-      
-      </div>
-      <div className='insidewt4'> 
-      <p className='Break'>Tune Up: Breaking Unhealthy Behaviors</p> 
-       <img className='iconnnn' src={icon} alt="" />
-       <h1 className='num4'>3000</h1>
-      
-      <Inplace onOpen={onOpen}>
-        <InplaceDisplay>View Data</InplaceDisplay>
-        <InplaceContent>
-          <DataTable value={products}>
-            <Column field="code" header="Code" />
-            <Column field="name" header="Name" />
-            <Column field="category" header="Category" />
-            <Column field="quantity" header="Quantity" />
-          </DataTable>
-        </InplaceContent>
-      </Inplace>
-      
-      
-      
-      </div>
-
-       <p className='down'>LastMonth</p>
-
-     
-
-
-     </div>
     </div>
+
+    {/* Your content for the Generate Reports button goes here */}
     
     <div className="reports-content flex justify-content-center">
-          
+      <div className="pink-box">
+        <div className='generate'>
+          <h2>Generate Reports</h2>
+        </div>
+
+        <div className="inner-box">
+          <p className='text'>Recent Activities</p>
+
+          {/* Section 1 */}
+          <div className='insidewt'>
+            {/* ... (Your existing code) */}
+            <Inplace onOpen={onOpen}>
+              <InplaceDisplay>View Data</InplaceDisplay>
+              <InplaceContent>
+                <DataTable value={products}>
+                  <Column field="code" header="Code" />
+                  <Column field="name" header="Name" />
+                  <Column field="category" header="Category" />
+                  <Column field="quantity" header="Quantity" />
+                </DataTable>
+              </InplaceContent>
+            </Inplace>
           </div>
-        </>
-      )}
+
+          {/* ... (Repeat the structure for other sections) */}
+
+          <p className='down'>LastMonth</p>
+        </div>
+      </div>
+    </div>
+  </>
+)}
 
 
 

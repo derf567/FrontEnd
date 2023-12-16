@@ -4,7 +4,8 @@ import App from './App.jsx'
 
 import './pages/Login.jsx'
 import './pages/Dashboard.jsx'
-import Log from './Log.jsx'
+import './pages/Reports.jsx'
+
 
 
 import {
@@ -13,6 +14,7 @@ import {
 } from "react-router-dom";
 import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import Reports from './pages/Reports.jsx'
 
 
 
@@ -33,9 +35,10 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/Log",
-    element: <Log />,
+    path: "/Reports",
+    element: <Reports />,
   },
+
 
   
 

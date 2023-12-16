@@ -53,8 +53,8 @@ border: none;
 .Id-box{
   position: absolute; 
   z-index: 1;
-  top: 35%; 
-  left: 46%; 
+  top: 25%; 
+  left: 11%; 
   transform: translate(-50%, -50%); 
   width: 200px;
   margin-top: 100px;   
@@ -93,8 +93,8 @@ border: none;
 .password-box{
   position: absolute; 
   z-index: 1;
-  top: 53%; 
-  left: 56.5%; 
+  top: 45%; 
+  left: 19%; 
   transform: translate(-50%, -50%);
   width: 500px;
 }
@@ -149,10 +149,10 @@ body {
 }.center-container {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
-  width: 600px; 
-  height: 500px; 
+  width: 1200px; 
+  height: 2000px; 
   background-color: rgba(255, 255, 255, 0.8); 
   border: 1px solid #ccc; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -161,7 +161,7 @@ body {
 }
 #login-button{
   margin-top: 600px;
-  margin-left: 860px;
+  margin-left: 120px;
   width: 150px; 
   height: 40px; 
   background-color: #D2334C; 
@@ -177,4 +177,12 @@ body {
   left: 850px; 
   z-index: 2; 
 
+}.table-row {
+  display: flex;
+  align-items: center;
+}
+
+.status-column {
+  /* Add any additional styling you need for the status column */
+  margin-right: 8px; /* Adjust as needed */
 }

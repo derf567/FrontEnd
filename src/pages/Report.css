@@ -5,21 +5,9 @@
     left: 2%;
 }
 .Header{
-    
-    margin-left: 3%;
-    margin-top: -2%;
-
-}.Too{
-  margin-left: 22.7%;
-  margin-top: -32.8%;
-  position: absolute;
-
-
-}.Toome{
-  margin-left: 22.7%;
-  margin-top: -32.8%;
-  position: absolute;
-
+    position: absolute;
+    left: 16%;
+    top: 8%;
 }
 .event{
     position: absolute;
@@ -565,7 +553,6 @@
     font-size: 18px; 
     margin-left: 15%;
     margin-top: 2%;
-<<<<<<< HEAD
   }.Hme .p-button {
     color: black !important; 
     background-color: #ffffff !important; 
@@ -580,6 +567,4 @@
     width: 55%; /* Set the desired width */
     margin-top: 29%;
     margin-left: 25% ;
-=======
->>>>>>> 6e808869900117415446b74bb337f02c8aeb9467
   }
