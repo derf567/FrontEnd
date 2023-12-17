@@ -45,6 +45,20 @@ function Dashboard() {
   const [isInplaceOpen, setIsInplaceOpen] = useState(false);   {/* Inplace */}
   const [value, setValue] = useState('');
   
+  const [isViewDetailsClicked, setViewDetailsClicked] = useState(false);
+
+  const [showDetails, setShowDetails] = useState(true);
+
+  
+  const handleViewDetailsClick = () => {
+    // Toggle the visibility of details
+    setShowDetails(!showDetails);
+  };
+  const handleBackClick = () => {
+    // Set the state to go back to the previous visual
+    setShowDetails(true);
+  };
+  
   const products = [
     { code: '001', name: 'Product 1', category: 'Category 1', quantity: 10 },
     // Add more product data as needed
@@ -357,18 +371,7 @@ function Dashboard() {
           <div className='close'>
             <p>Close</p>
           </div>
-
-
-
           </div>
-
-
-
-    
-      
-      
-     
-      
       </>
       )}
 
@@ -395,11 +398,6 @@ function Dashboard() {
       
       
       </div>
-       {/* 
-      <div className='no'>
-      <h4>, 02 November 2023</h4>
-      </div>  */}
-       
       <div class="custom-box">
       <div className='plan'>
         <p>Acitvity Plan</p>
@@ -427,78 +425,15 @@ function Dashboard() {
           <div className="card6 flex justify-content-center">
             <Button className="Button6" label="Start Event" severity="danger" />
           </div>
-
-         
-
-         
-         
-
-      
-   
       </div>
 
       <div class="custom-box2">
    
       </div>
-      
-
-
-
-     {/* 
-     
-      <div className='word'> 
-      <p>Events</p>
-      </div>
-
-
-      <div className='intrams'> 
-        <p>Intramural</p>
-      </div>
-
-      <div className='ccs'> 
-        <p>College Days</p>
-      </div>
-
-      <div className='cnight'> 
-        <p>CSS Nights</p>
-      </div>
-
-
-
-
-
-          <div className="card flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card2 flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card3 flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card4 flex justify-content-center">
-            <Button className="Button4" label="Start Event" severity="danger" />
-          </div>
-          <div className="card5 flex justify-content-center">
-            <Button className="Button5" label="Start Event" severity="danger" />
-          </div>
-          <div className="card6 flex justify-content-center">
-            <Button className="Button6" label="Start Event" severity="danger" />
-          </div>
-
-        */}
-          
-
-
           <div className="dashboard-content flex justify-content-center">
           </div>
         </>
       )}
-
-
-
-
-
 
       {isCalendarClicked && (
         <>
@@ -507,16 +442,6 @@ function Dashboard() {
        <TieredMenu model={items} breakpoint="767px" />
        </div>
         
-       {/* Your content for the Calendar button goes here */}
- 
-       {/* <div className='calendarhead'>
-       <h1>Schedule</h1>
-       <h4 className='sat'> Saturday</h4>
-       </div>
- 
-       <div className='luv'>
-       <h4>,04 November 2023</h4>
-       </div>*/}
  
        <div className='Header'>
        <h1>Calendar</h1>
@@ -559,81 +484,91 @@ function Dashboard() {
 
 
 {isGenerateReportsClicked && (
-  <>
-  <img className='userr' src={userr} alt="" />
+        <>
+          <img className='userr' src={userr} alt="" />
 
- <div className='logout'>
- <TieredMenu model={items} breakpoint="767px" />
- </div>
-{/* Your content for the Generate Reports button goes here */}
+          <div className='logout'>
+            <TieredMenu model={items} breakpoint="767px" />
+          </div>
+          
+          <div className="pink-box">
+            <div className='generate'>
+              <h2>Generate Reports</h2>
+            </div>
 
-<div className="pink-box">
-<div className='generate'>
-<h2>Generate Reports</h2></div>
+            <div className="inner-box">
+              {showDetails ? (
+                <>
+                  <p className='text'>Recent Activities</p>
 
-<div className="inner-box">
- <p className='text'>Recent Activities</p>
+                  <div className='insidewt'>
+                    <p className='textintrams'>Intramural</p>
+                    <img className='icon' src={icon} alt="" />
+                    <h1 className='num1'>5,900</h1>
 
+                    <div className='Hme'>
+                      <Button label="View Details" className="p-button" onClick={handleViewDetailsClick} />
+                    </div>
+                  </div>
 
- <div className='insidewt'>
-  <p className='textintrams'>Intramural</p> 
-  <img className='icon' src={icon} alt="" />
-  <h1 className='num1'>5,900</h1>
-  
-  <div className='Hme'>
-   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
- </div>
+                  {/* Additional sections */}
+                  <div className='insidewt2'> 
+                    <p className='CNght'>CCS Nights</p> 
+                    <img className='iconn' src={icon} alt="" />
+                    <h1 className='num2'>500</h1>
+                   
+                    <div className='Hme'>
+                      <Button label="View Details" className="p-button" onClick={handleViewDetailsClick} />
+                    </div>
+                  </div>
+                  <div className='insidewt3'> 
+                    <p className='CDays'>College Days</p> 
+                    <img className='iconnn' src={icon} alt="" />
+                    <h1 className='num3'>3000</h1>
+                   
+                    <div className='Hme'>
+                      <Button label="View Details" className="p-button" onClick={handleViewDetailsClick} />
+                    </div>
+                  </div>
+                  <div className='insidewt4'> 
+                    <p className='Break'>Tune Up: Breaking Unhealthy Behaviors</p> 
+                    <img className='iconnnn' src={icon} alt="" />
+                    <h1 className='num4'>3000</h1>
+                   
+                    <div className='Hme'>
+                      <Button label="View Details" className="p-button" onClick={handleViewDetailsClick} />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                // Content for the new state when details are hidden
+                <>
+                  <div className='hidden-content'>
+                    {/* Content for insidewt when details are hidden */}
+                    <p>New content for Intramural goes here</p>
+                  </div>
+                  <div className='hidden-content'>
+                    {/* Content for insidewt2 when details are hidden */}
+                    <p>New content for CCS Nights goes here</p>
+                  </div>
+                  <div className='hidden-content'>
+                    {/* Content for insidewt3 when details are hidden */}
+                    <p>New content for College Days goes here</p>
+                  </div>
+                  <div className='hidden-content'>
+                    {/* Content for insidewt4 when details are hidden */}
+                    <p>New content for Tune Up: Breaking Unhealthy Behaviors goes here</p>
+                  </div>
+                  <Button label="Back" className="p-button" onClick={handleBackClick} />
+                </>
+              )}
+            </div>
+          </div>
+          
+          <div className="reports-content flex justify-content-center"></div>
+        </>
+      )}
 
-
- </div>
-
- <div className='insidewt2'> 
- <p className='CNght'>CCS Nights</p> 
-  <img className='iconn' src={icon} alt="" />
-  <h1 className='num2'>500</h1>
- 
-  <div className='Hme'>
-   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
- </div>
- 
- 
- </div>
- <div className='insidewt3'> 
- <p className='CDays'>College Days</p> 
-  <img className='iconnn' src={icon} alt="" />
-  <h1 className='num3'>3000</h1>
- 
-  <div className='Hme'>
-   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
- </div>
- 
- </div>
- <div className='insidewt4'> 
- <p className='Break'>Tune Up: Breaking Unhealthy Behaviors</p> 
-  <img className='iconnnn' src={icon} alt="" />
-  <h1 className='num4'>3000</h1>
- 
- 
-  <div className='Hme'>
-   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
- </div>
- 
- 
- </div>
-
-  <p className='down'>LastMonth</p>
-
-
-
-
-</div>
-</div>
-
-<div className="reports-content flex justify-content-center">
-     
-     </div>
-   </>
- )}
 
 
     
@@ -646,10 +581,6 @@ function Dashboard() {
        
       {/* Your content for the About button goes here */}
        
-      {/*<h1 className='About'>ABOUT US.</h1>
-      <p className='per'>The University Student Attendance Monitoring System (USAMS) has brought about a positive transformation in the academic journey of our Computer Science students. 
-        The system's intuitive interface has made it easier for both faculty and students in the department to navigate, enhancing their overall experience.
-       The system's user-friendly interface and seamless integration into our existing infrastructure have made it a valuable asset for both faculty and administrative staff. The real-time attendance tracking feature ensures that we can promptly address any concerns related to student attendance and engagement. This has not only streamlined administrative processes but has also enhanced the overall learning experience for our students.</p>*/}
       <h1 className='About'>ABOUT US.</h1>
       <div className='per'>
       <p>The University Student Attendance Monitoring System (USAMS) has brought about a positive transformation in the academic journey of our Computer Science students. </p>
