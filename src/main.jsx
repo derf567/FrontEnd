@@ -5,7 +5,7 @@ import App from './App.jsx'
 import './pages/Login.jsx'
 import './pages/Dashboard.jsx'
 import './pages/Reports.jsx'
-
+import './pages/Intramurals.jsx'
 
 
 import {
@@ -15,7 +15,7 @@ import {
 import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Reports from './pages/Reports.jsx'
-
+import Intramurals from './pages/Intramurals.jsx'
 
 
 
@@ -38,7 +38,10 @@ const router = createBrowserRouter([
     path: "/Reports",
     element: <Reports />,
   },
-
+  {
+    path: "/Intramurals",
+    element: <Intramurals />,
+  },
 
   
 
