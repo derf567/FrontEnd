@@ -200,7 +200,9 @@ function Dashboard() {
     { name: 'Bajada', code: '003' },
     
    
-  ];
+  ];const handleHomeClick = () => {
+    console.log('Home clicked');
+  };
   
 
 
@@ -500,41 +502,57 @@ function Dashboard() {
 
       {isCalendarClicked && (
         <>
-       <img className='userr' src={userr} alt="" />
-       <div className='logout'>
-      <TieredMenu model={items} breakpoint="767px" />
-      </div>
+        <img className='userr' src={userr} alt="" />
+        <div className='logout'>
+       <TieredMenu model={items} breakpoint="767px" />
+       </div>
+        
+       {/* Your content for the Calendar button goes here */}
+ 
+       {/* <div className='calendarhead'>
+       <h1>Schedule</h1>
+       <h4 className='sat'> Saturday</h4>
+       </div>
+ 
+       <div className='luv'>
+       <h4>,04 November 2023</h4>
+       </div>*/}
+ 
+       <div className='Header'>
+       <h1>Calendar</h1>
+       <h4 className='Thurs'>Thursday</h4>
+       </div>
+ 
+       <div className='Toome'>
+       <h4 >,02 November 2023</h4>
+       </div>
+ 
+       <div className='ivy'>
+       <h1 className='Hi'>Hi, Shenna</h1>
+       <p className='day'>Ready to start your day?</p>
+ 
+       </div>
+       <img className='girl' src={girl} alt="" />
+       <div className='car'>
+         <h3>Calendar</h3>
+       </div>
        
-      {/* Your content for the Calendar button goes here */}
-
-      <div className='calendarhead'>
-      <h1>Schedule</h1>
-      <h4 className='sat'> Saturday</h4>
-      </div>
-
-      <div className='luv'>
-      <h4>,04 November 2023</h4>
-      </div>
-      
-      <div className="Calendar-container">
-      <Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek />
-      </div>
-
-      <div className='events'>
-       <h3>Schedule, Event</h3>
-      </div>
-
-      <div className="flex flex-wrap gap-2 mb-4">
-      <Button type="button" icon="pi pi-plus" label="Expand All" onClick={expandAll} />
-      <Button type="button" icon="pi pi-minus" label="Collapse All" onClick={collapseAll} />
-      </div>
-
-     <Tree value={nodes} expandedKeys={expandedKeys} onToggle={(e) => setExpandedKeys(e.value)} className="w-full md:w-30rem" />
-
-     <div className="calendar-content flex justify-content-center">
-      </div>
-        </>
-      )}
+       <div className="Calendar-container">
+       <Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek />
+       </div>
+ 
+       <div className='events'>
+        <h3>Schedule, Event</h3>
+       </div>
+ 
+       
+ 
+      <Tree value={nodes} expandedKeys={expandedKeys} onToggle={(e) => setExpandedKeys(e.value)} className="w-full md:w-30rem" />
+ 
+      <div className="calendar-content flex justify-content-center">
+       </div>
+         </>
+       )}
 
 
 
@@ -542,48 +560,80 @@ function Dashboard() {
 
 {isGenerateReportsClicked && (
   <>
-    <img className='userr' src={userr} alt="" />
+  <img className='userr' src={userr} alt="" />
+
+ <div className='logout'>
+ <TieredMenu model={items} breakpoint="767px" />
+ </div>
+{/* Your content for the Generate Reports button goes here */}
+
+<div className="pink-box">
+<div className='generate'>
+<h2>Generate Reports</h2></div>
+
+<div className="inner-box">
+ <p className='text'>Recent Activities</p>
+
+
+ <div className='insidewt'>
+  <p className='textintrams'>Intramural</p> 
+  <img className='icon' src={icon} alt="" />
+  <h1 className='num1'>5,900</h1>
   
-    <div className='logout'>
-      <TieredMenu model={items} breakpoint="767px" />
-    </div>
+  <div className='Hme'>
+   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
+ </div>
 
-    {/* Your content for the Generate Reports button goes here */}
-    
-    <div className="reports-content flex justify-content-center">
-      <div className="pink-box">
-        <div className='generate'>
-          <h2>Generate Reports</h2>
-        </div>
 
-        <div className="inner-box">
-          <p className='text'>Recent Activities</p>
+ </div>
 
-          {/* Section 1 */}
-          <div className='insidewt'>
-            {/* ... (Your existing code) */}
-            <Inplace onOpen={onOpen}>
-              <InplaceDisplay>View Data</InplaceDisplay>
-              <InplaceContent>
-                <DataTable value={products}>
-                  <Column field="code" header="Code" />
-                  <Column field="name" header="Name" />
-                  <Column field="category" header="Category" />
-                  <Column field="quantity" header="Quantity" />
-                </DataTable>
-              </InplaceContent>
-            </Inplace>
-          </div>
+ <div className='insidewt2'> 
+ <p className='CNght'>CCS Nights</p> 
+  <img className='iconn' src={icon} alt="" />
+  <h1 className='num2'>500</h1>
+ 
+  <div className='Hme'>
+   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
+ </div>
+ 
+ 
+ </div>
+ <div className='insidewt3'> 
+ <p className='CDays'>College Days</p> 
+  <img className='iconnn' src={icon} alt="" />
+  <h1 className='num3'>3000</h1>
+ 
+  <div className='Hme'>
+   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
+ </div>
+ 
+ </div>
+ <div className='insidewt4'> 
+ <p className='Break'>Tune Up: Breaking Unhealthy Behaviors</p> 
+  <img className='iconnnn' src={icon} alt="" />
+  <h1 className='num4'>3000</h1>
+ 
+ 
+  <div className='Hme'>
+   <Button label="View Details" className="p-button" onClick={handleHomeClick} />
+ </div>
+ 
+ 
+ </div>
 
-          {/* ... (Repeat the structure for other sections) */}
+  <p className='down'>LastMonth</p>
 
-          <p className='down'>LastMonth</p>
-        </div>
-      </div>
-    </div>
-  </>
-)}
 
+
+
+</div>
+</div>
+
+<div className="reports-content flex justify-content-center">
+     
+     </div>
+   </>
+ )}
 
 
     

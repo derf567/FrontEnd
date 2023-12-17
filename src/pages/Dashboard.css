@@ -565,7 +565,7 @@
     font-size: 18px; 
     margin-left: 15%;
     margin-top: 2%;
-<<<<<<< HEAD
+
   }.Hme .p-button {
     color: black !important; 
     background-color: #ffffff !important; 
@@ -575,11 +575,42 @@
     position: absolute;
     font-size: 11px;
     width: 80%;
+  }.Too{
+    margin-left: 22.7%;
+    margin-top: -32.8%;
+    position: absolute;
+  
+  
+  }.Toome{
+    margin-left: 22.7%;
+    margin-top: -32.8%;
+    position: absolute;
+  
+  }.Thurs{
+    margin-left: 2%;
+    margin-top: -12%;
+    color:#D2334C;
 
-  }.Main .p-datatable {
-    width: 55%; /* Set the desired width */
-    margin-top: 29%;
-    margin-left: 25% ;
-=======
->>>>>>> 6e808869900117415446b74bb337f02c8aeb9467
+  }.Calendar-container {
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 26px;
+    left: 2%; 
+    transform: translateX(23%); 
+    
   }
+  
+  .Calendar-container .p-calendar {
+    width: 650px; 
+    height: 360px; 
+  }.event{
+    position: absolute;
+    left: -25%;
+    top: 30%;
+}.car{
+  margin-left: 23%;
+  margin-top: 25%;
+  color:#443838
+
+}
