@@ -17,14 +17,13 @@ import userr from './img/userr.png';
 import girl from './img/girl.png';
 import { Calendar } from 'primereact/calendar';
 import { Tree } from 'primereact/tree';
-import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column'; 
 import { TieredMenu } from 'primereact/tieredmenu';
 import { InputText } from 'primereact/inputtext';
 import { MultiSelect } from 'primereact/multiselect';
 import React, { useState, useEffect } from 'react';
-import { InputSwitch } from 'primereact/inputswitch';
+import { Dialog } from 'primereact/dialog';
 
 
        
@@ -47,9 +46,20 @@ function Dashboard() {
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [isInplaceOpen, setIsInplaceOpen] = useState(false);   {/* Inplace */}
   const [value, setValue] = useState('');
+  const [showDialog, setShowDialog] = useState(false);
+
 
   const [isViewDetailsClicked, setViewDetailsClicked] = useState(false);
 
+  const handleCreateEventClick = () => {
+  setShowDialog(true);
+  setCreateEventClicked(true);
+  setDashboardClicked(false);
+  setCalendarClicked(false);
+  setGenerateReportsClicked(false);
+  setAboutClicked(false)
+    // You can add additional logic here if needed
+  };
 
   const [rowClick, setRowClick] = useState(/* initial value here */);
   const [selectedProducts, setSelectedProducts] = useState([]);
@@ -221,17 +231,19 @@ function Dashboard() {
           {
             label: 'Create Event',
             icon: 'pi pi-fw pi-plus',
-            command: () => {
+            command: handleCreateEventClick, 
+
+            },
+        ],
+      },
+    ];
+
+     {/*  () => {
               setCreateEventClicked(true);
               setDashboardClicked(false);
               setCalendarClicked(false);
               setGenerateReportsClicked(false);
-              setAboutClicked(false)
-            },
-          },
-        ],
-      },
-    ];
+              setAboutClicked(false)*/}
   
     const items2 = [
       {
@@ -380,82 +392,28 @@ function Dashboard() {
       
       
       {isCreateEventClicked && (
-        <>
+      <>
       <img className='userr' src={userr} alt="" />
       <div className='logout'>
       <TieredMenu model={items} breakpoint="767px" />
       </div>
-      {/* Your time component goes here */}
-      {/*
-      <div className='Header'>
-      <h1>Dashboard</h1>
-      <h4 className='Thurs'>Thursday</h4>
-      
-      </div>
-      <div className='no'>
-      <h4>, 02 November 2023</h4>
-      </div>
-
-       <div className='ivy'>
-      <h1 className='Hi'>Hi, Shenna</h1>
-      <p className='day'>Ready to start your day?</p>
-
-      </div>
-      <img className='girl' src={girl} alt="" />
-
-      <div className='event'> 
-      <p>Events</p>
-      </div>
-
-      <div className='intrams'> 
-        <p>Intramural</p>
-      </div>
-
-      <div className='ccs'> 
-        <p>College Days</p>
-      </div>
-
-      <div className='cnight'> 
-        <p>CSS Nights</p>
-      </div>
-
-
-
-          <div className="card flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card2 flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card3 flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
-          <div className="card4 flex justify-content-center">
-            <Button className="Button4" label="Start Event" severity="danger" />
-          </div>
-          <div className="card5 flex justify-content-center">
-            <Button className="Button5" label="Start Event" severity="danger" />
-          </div>
-          <div className="card6 flex justify-content-center">
-            <Button className="Button6" label="Start Event" severity="danger" />
-          </div>
+     
+          <Dialog
+          visible={showDialog}
+          onHide={() => setShowDialog(false)}
+          header="Create Event"
+          >
         
-
+         <div>
          
-          
-
-
-          <div className="dashboard-content flex justify-content-center">
-          </div>
-          */}
-          <div className="pink">
+         <div className="pink">
           <div className='gen'>
           <h2>Add Event</h2></div>
 
           <div className='apple'>
 
           <div className='evnme'>
-            <h4>Event Name:</h4>
+           <h4>Event Name:</h4>
             
             <div className='searchh'>
             <InputText value={value} onChange={(e) => setValue(e.target.value)} />
@@ -492,19 +450,8 @@ function Dashboard() {
       placeholder="Select Location " maxSelectedLabels={3} className="w-full md:w-20rem" />
   </div>
 </div>
-          
-            
-
-
-         
-     
-       
-    
-          </div>
-     
-         
-
-          <div className='save'>
+       </div>
+         <div className='save'>
           <Button label="Save"  rounded className="customButton" />  
         
           </div>
@@ -516,7 +463,19 @@ function Dashboard() {
           <div className='close'>
             <p>Close</p>
           </div>
+
+
+
+
+         
+
+
           </div>
+          </div>
+    </Dialog>
+
+        
+          
       </>
       )}
 

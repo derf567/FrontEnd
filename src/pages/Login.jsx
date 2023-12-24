@@ -59,7 +59,7 @@ function Login() {
     return(
         <>
         <img className='back' src={back} alt="" />
-        <img className='user' src={userr} alt="" />
+       
         
           <div className="center-container">
           {/* white background*/}
@@ -68,9 +68,7 @@ function Login() {
         
         <div className="app-container1">
 
-        <div className="new-component">
-          <Menubar className='navbar' model={items} />
-        </div>
+       
     
          <div class="background-container">
           <div class="text-container">
