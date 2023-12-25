@@ -117,7 +117,7 @@ color: #ffffff;
 }
 
 .Calendar-container {
-  
+  position: absolute;
   justify-content: center;
   align-items: center;
   margin-top: 26px;
@@ -129,32 +129,43 @@ color: #ffffff;
 .Calendar-container .p-calendar {
   width: 650px; 
   height: 360px; 
+  top: 89px;
+  left:700px;
+}.container {
+  position: relative; /* Add this line if not already present */
 }
 .events{
-  margin-left: 75%;
-  margin-top: -20%;
+  position: absolute;
+  left: 50%;
+  top: 8%;
   color:#443838
 
 
+}.libog{
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 20%;
+  color:#695E5E
 }
 
-.p-tree-toggler,
-.p-treenode-label {
-  font-size: 12px; 
+
+
+
+.can{
+  position:absolute;
+  margin-top: 8%;
+  margin-left:50%;
+  color:#695E5E
 }
 
-.p-treeselect {
-  border: 1px solid #ccc;
-  padding: 8px;
-  margin-left: 5%; 
-  margin-top: 5%;
-  width: 200px; 
-}
+
+
 
 .w-full.md\:w-30rem {
+  position: absolute;
   width: 380px;
-  margin-left: 75%;
-  margin-top: 2%;
+  left: -55%;
+  top: 20%;
 
 }
 
@@ -597,15 +608,16 @@ overflow: hidden;
   
   justify-content: center;
   align-items: center;
-  margin-top: 26px;
-  left: 2%; 
-  transform: translateX(23%); 
+ transform: translateX(23%); 
   
 }
 
-.Calendar-container .p-calendar {
+div.Calendar-container .p-calendar {
   width: 650px; 
-  height: 360px; 
+  height: 500px; 
+  top: 200px;
+  left: 700px;
+  
 }.event{
   position: absolute;
   left: -25%;

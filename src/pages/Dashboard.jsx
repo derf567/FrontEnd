@@ -540,12 +540,7 @@ function Dashboard() {
        <h4 >,02 November 2023</h4>
        </div>
  
-       {/*<div className='ivy'>
-       <h1 className='Hi'>Hi, Shenna</h1>
-       <p className='day'>Ready to start your day?</p>
- 
-       </div>
-       <img className='girl' src={girl} alt="" />*/}
+       
        <div className='can'>
          <h3>Calendar</h3>
        </div>
@@ -554,7 +549,7 @@ function Dashboard() {
        <Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek onSelect={(e) => handleDateClick(e.value)} />
        </div>
  
-       <div className='events'>
+       <div className='libog'>
         <h3>Schedule, Event</h3>
        </div>
  
