@@ -8,6 +8,7 @@ import './Dashboard.css';
 import { Button } from 'primereact/button';
 import logo from './img/logo.png';
 import icon from './img/icon.png';
+import pic from './img/pic.png';
 import banner from './img/banner.png';
 import gab from './img/gab.png';
 import micah from './img/micah.png';
@@ -24,6 +25,10 @@ import { InputText } from 'primereact/inputtext';
 import { MultiSelect } from 'primereact/multiselect';
 import React, { useState, useEffect } from 'react';
 import { Dialog } from 'primereact/dialog';
+import { useRef } from 'react';
+import { Steps } from 'primereact/steps';
+import { Toast } from 'primereact/toast';
+import { TabView, TabPanel } from 'primereact/tabview';        
 
 
        
@@ -47,9 +52,18 @@ function Dashboard() {
   const [isInplaceOpen, setIsInplaceOpen] = useState(false);   {/* Inplace */}
   const [value, setValue] = useState('');
   const [showDialog, setShowDialog] = useState(false);
-
+  const toast = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const [isViewDetailsClicked, setViewDetailsClicked] = useState(false);
+
+  
+
+  const handleTabChange = (event) => {
+    // Update the activeIndex when the tab changes
+    setActiveIndex(event.index);
+  };
+
 
   const handleCreateEventClick = () => {
   setShowDialog(true);
@@ -58,9 +72,10 @@ function Dashboard() {
   setCalendarClicked(false);
   setGenerateReportsClicked(false);
   setAboutClicked(false)
-    // You can add additional logic here if needed
-  };
+  toast.current.show({ severity: 'success', summary: 'Event Created', detail: 'Your event has been created successfully!' });
 
+  };
+ 
   const [rowClick, setRowClick] = useState(/* initial value here */);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const manuallyDefinedData = [
@@ -390,14 +405,14 @@ function Dashboard() {
       </div>
 
       
-      
+       {/* Calendar portion, katong naay expand */}
       {isCreateEventClicked && (
       <>
       <img className='userr' src={userr} alt="" />
       <div className='logout'>
       <TieredMenu model={items} breakpoint="767px" />
       </div>
-     
+       
           <Dialog
           visible={showDialog}
           onHide={() => setShowDialog(false)}
@@ -473,9 +488,27 @@ function Dashboard() {
           </div>
           </div>
     </Dialog>
-
+ 
         
+      {/*  <Toast ref={toast}></Toast>
+       <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false} />
           
+<TabView activeIndex={activeIndex} onChange={handleTabChange}className="custom-tab-view">
+        <TabPanel header="Tab 1">
+        
+          <p>Tab 1 Content</p>
+        </TabPanel>
+        <TabPanel header="Tab 2">
+         
+          <p>Tab 2 Content</p>
+        </TabPanel>
+       
+      </TabView>*/}
+
+
+
+
+
       </>
       )}
 
@@ -535,6 +568,8 @@ function Dashboard() {
        <h1>Calendar</h1>
        <h4 className='Thurs'>Thursday</h4>
        </div>*/}
+
+       <img className='pic' src={pic} alt="" /> 
  
        <div className='Toome'>
        <h4 >,02 November 2023</h4>
