@@ -37,6 +37,11 @@ position: absolute;
   margin-left: 30%;
   margin-top: 20%;
   
+}.custom-toast-message {
+  background: #DB556A !important; /* Set your desired background color */
+  color: #ffffff !important; /* Set your desired text color */
+  border: 1px solid #DB556A !important; /* Set your desired border color */
+  border-radius: 8px !important; /* Set your desired border-radius */
 }
 .intrams{
   position: absolute;

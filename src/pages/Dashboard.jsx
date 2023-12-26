@@ -26,19 +26,9 @@ import { MultiSelect } from 'primereact/multiselect';
 import React, { useState, useEffect } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { useRef } from 'react';
-import { Steps } from 'primereact/steps';
 import { Toast } from 'primereact/toast';
-import { TabView, TabPanel } from 'primereact/tabview';        
-
 
        
-
-        
-        
-               
-        
-        
-        
 
 function Dashboard() {
   const [count, setCount] = useState(0);
@@ -54,10 +44,12 @@ function Dashboard() {
   const [showDialog, setShowDialog] = useState(false);
   const toast = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [isPopUpShown, setPopUpShown] = useState(false);
   const [isViewDetailsClicked, setViewDetailsClicked] = useState(false);
 
-  
+  const showSampleToast = () => {
+    toast.current.show({ severity: 'success', summary: 'Success', detail: 'Sample Toast Message' });
+  };
 
   const handleTabChange = (event) => {
     // Update the activeIndex when the tab changes
@@ -72,17 +64,47 @@ function Dashboard() {
   setCalendarClicked(false);
   setGenerateReportsClicked(false);
   setAboutClicked(false)
-  toast.current.show({ severity: 'success', summary: 'Event Created', detail: 'Your event has been created successfully!' });
 
+  showSampleToast();
+  
+
+  }; const showDashboardToast = () => {
+      toast.current.show({
+      severity: 'info',
+      summary: 'Success!',
+      detail: 'Information saved',
+      className: 'custom-toast-message', 
+    });
+ 
+ 
+  }; const handleRowClick = (event) => {
+    const clickedRowData = event.data;
+    showDashboardToast();
+  
+    console.log('Clicked Row Data:', clickedRowData);
   };
+
+  const handleSelectionChange = (e) => {
+    
+    if (e.value.length > 0 && !isPopUpShown) {
+    showDashboardToast();
+    setPopUpShown(true);
+    }
+  };
+  
+ 
+  
+
+
+  
  
   const [rowClick, setRowClick] = useState(/* initial value here */);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const manuallyDefinedData = [
-    { id: 1, event: 'Intramurals', date: '11-11-2023', cat: 'Bonifacio', dep: 'Higher Ed' },
-    { id: 2, event: 'CCS Nights', date: '02-11-2024', cat: 'Main(Bangke)', dep: 'CSS' },
-    { id: 3, event: 'College Days', date: '01-22-2024', cat: 'Bonifacio', dep: 'Higher Ed' },
-    { id: 4, event: 'Basic Ed Orientation', date: '01-22-2024', cat: 'Main(Bangke)', dep: 'Higher Ed' },
+    { id: 1, event: 'Intramurals',from:'11-20-23', date: '11-24-2023', cat: 'Bonifacio', dep: 'Higher Ed' },
+    { id: 2, event: 'CCS Nights',from:'11-20-23', date: '02-11-2024', cat: 'Main(Bangke)', dep: 'CSS' },
+    { id: 3, event: 'College Days',from:'11-20-23', date: '01-22-2024', cat: 'Bonifacio', dep: 'Higher Ed' },
+    { id: 4, event: 'Basic Ed Orientation',from:'11-20-23', date: '01-22-2024', cat: 'Main(Bangke)', dep: 'Higher Ed' },
     // Add more data as needed
   ];
 
@@ -339,8 +361,12 @@ function Dashboard() {
       key: '1',
       label: 'November',
       children: [
-        { key: '1.1', label: 'Intramural ' },
+        { key: '1.1', label: 'Intramural 20-24 ' },
         
+
+
+
+
       ],
     },
     {
@@ -403,7 +429,7 @@ function Dashboard() {
       <div className='dash'>
         <Menu className='insidethe-addnew' model={items2} />
       </div>
-
+      <Toast ref={toast}></Toast>
       
        {/* Calendar portion, katong naay expand */}
       {isCreateEventClicked && (
@@ -537,13 +563,28 @@ function Dashboard() {
       </div>
       
      
-     <DataTable value={manuallyDefinedData} className="custom-table"selectionMode={rowClick ? null : 'checkbox'} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} dataKey="id" tableStyle={{ minWidth: '50rem' }}>
+     <DataTable value={manuallyDefinedData} className="custom-table"selectionMode="multiple" selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} dataKey="id" tableStyle={{ minWidth: '50rem' }}  onRowClick={(e) => handleRowClick(e)}>
     <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
     <Column field="event" header="Event Name"></Column>
+    <Column field="from" header="Date From"></Column>
     <Column field="date" header="Date To"></Column>
     <Column field="cat" header="Location"></Column>
     <Column field="dep" header="Department"></Column>
     </DataTable>
+
+    <Dialog
+    visible={showDialog}
+    onHide={() => handleConfirmation(false)} // Handle cancel button or closing the dialog
+    header="Save"
+    footer={
+    <div>
+      <Button label="Save" onClick={() => handleConfirmation(true)} className="customButton" />
+      <Button label="Cancel" onClick={() => handleConfirmation(false)} className="customCancelButton" />
+    </div>
+  }
+>
+  {/* Your existing content for creating an event */}
+</Dialog>
 
 
 
