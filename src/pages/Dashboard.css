@@ -92,7 +92,22 @@ position: absolute;
   width: 100px;
   position: absolute;
   background-color: #D2334C;
-color: #ffffff;
+  color: #ffffff;
+  top: 165px;
+}
+#Button2 {
+  width: 100px;
+  position: absolute;
+  background-color: #D2334C;
+  color: #ffffff;
+  top: 190px;
+}
+#Button3 {
+  width: 100px;
+  position: absolute;
+  background-color: #D2334C;
+  color: #ffffff;
+  top: 210px;
 }
 .card2 {
   position: absolute;
@@ -106,24 +121,13 @@ color: #ffffff;
   left: 50%;
 
 }
-.card4 {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  
-
-}
-.card5 {
-  position: absolute;
-  top: 60%;
-  left: 70%;
-
-}
-.card6 {
-  position: absolute;
-  top: 70%;
-  left: 70%;
-
+#Button4{
+  margin-top: 600px;
+  margin-left: 120px;
+  width: 150px; 
+  height: 40px; 
+  background-color: #D2334C; 
+  border-color: #D2334C; 
 }
 
 

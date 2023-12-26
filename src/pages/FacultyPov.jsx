@@ -27,10 +27,27 @@ import React, { useState, useEffect } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { useRef } from 'react';
 import { Toast } from 'primereact/toast';
+import {useNavigate} from 'react-router-dom';
 
        
 
-function Dashboard() {
+function FacultyPov() {
+  const navigate = useNavigate();
+
+
+  const handleStartEventClick = () => {
+    // Your logic for handling the login click
+    navigate('/Tapid');
+  };
+
+
+  useEffect(() => {
+    setGenerateReportsClicked(false);
+    setCreateEventClicked(false);
+    setDashboardClicked(true);
+    setCalendarClicked(false);
+    setAboutClicked(false);
+}, []);
   const [count, setCount] = useState(0);
   const [isCreateEventClicked, setCreateEventClicked] = useState(false);
   const [isDashboardClicked, setDashboardClicked] = useState(false);
@@ -571,6 +588,35 @@ function Dashboard() {
 
       {isDashboardClicked && (
         <>
+      <div className='event'> 
+      <p>Events</p>
+      </div>
+
+      <div className='intrams'> 
+        <p>Intramural</p>
+      </div>
+
+      <div className='ccs'> 
+        <p>College Days</p>
+      </div>
+
+      <div className='cnight'> 
+        <p>CSS Nights</p>
+      </div>
+      <div className="card flex justify-content-center">
+            <Button id='Button1' label="Open" severity="danger" />
+          </div>
+          <div className="card2 flex justify-content-center">
+            <Button id='Button2' label="Open" severity="danger" />
+          </div>
+          <div className="card3 flex justify-content-center">
+            <Button id='Button3' label="Open" severity="danger" />
+          </div>
+          
+          <Button onClick={handleStartEventClick} id='Button4' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
+          <Button onClick={handleStartEventClick} id='Button5' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
+          <Button onClick={handleStartEventClick} id='Button6' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
+          
        <img className='userr' src={userr} alt="" />
        <div className='logout'>
       <TieredMenu model={items} breakpoint="767px" />
@@ -586,37 +632,7 @@ function Dashboard() {
 
       <div className='minji'> 
       <h3>Events </h3>
-
       </div>
-      
-      <DataTable value={manuallyDefinedData} className="custom-table"selectionMode="multiple" selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} dataKey="id" tableStyle={{ minWidth: '50rem' }}  onRowClick={(e) => handleRowClick(e)}>
-    <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
-    <Column field="event" header="Event Name"></Column>
-    <Column field="from" header="Date From"></Column>
-    <Column field="date" header="Date To"></Column>
-    <Column field="cat" header="Location"></Column>
-    <Column field="dep" header="Department"></Column>
-    </DataTable>
-
-
-    <Dialog
-    visible={showDialog}
-    onHide={() => handleConfirmation(false)} // Handle cancel button or closing the dialog
-    header="Save"
-    footer={
-    <div>
-      <Button label="Save" onClick={() => handleConfirmation(true)} className="customButton" />
-      <Button label="Cancel" onClick={() => handleConfirmation(false)} className="customCancelButton" />
-    </div>
-  }
->
-  {/* Your existing content for creating an event */}
-</Dialog>
-
-
-
-
-     
           <div className="dashboard-content flex justify-content-center">
           </div>
         </>
@@ -628,15 +644,6 @@ function Dashboard() {
         <div className='logout'>
        <TieredMenu model={items} breakpoint="767px" />
        </div>
-        
-  {/* Your content for the Dashboard button goes here */}
-
-
-       {/*<div className='Header'>
-       <h1>Calendar</h1>
-       <h4 className='Thurs'>Thursday</h4>
-       </div>*/}
-
        <img className='pic' src={pic} alt="" /> 
  
        <div className='Toome'>
@@ -839,4 +846,4 @@ function Dashboard() {
 
 
 
-export default Dashboard;
+export default FacultyPov;

@@ -20,7 +20,7 @@ import {useNavigate} from 'react-router-dom';
 function Login() {
 
     const navigate = useNavigate();
-  const handleloginClick = () => navigate('/Dashboard');
+    const handleloginClick = () => navigate('/Dashboard');
 
     const items = [
         {

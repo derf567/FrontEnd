@@ -6,6 +6,8 @@ import './pages/Login.jsx'
 import './pages/Dashboard.jsx'
 import './pages/Reports.jsx'
 import './pages/Intramurals.jsx'
+import './pages/FacultyPov.jsx'
+
 
 
 import {
@@ -16,6 +18,8 @@ import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Reports from './pages/Reports.jsx'
 import Intramurals from './pages/Intramurals.jsx'
+import FacultyPov from './pages/FacultyPov.jsx'
+
 
 
 
@@ -42,6 +46,11 @@ const router = createBrowserRouter([
     path: "/Intramurals",
     element: <Intramurals />,
   },
+  {
+    path: "/FacultyPov",
+    element: <FacultyPov />,
+  },
+
 
   
 
