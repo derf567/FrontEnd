@@ -560,15 +560,23 @@ overflow: hidden;
   margin-top: -3.2%;
   
 
-}.close{
+
+
+
+}.customCloseButton {
+  border: none;
+  background: none;
+  padding: 0; /* Optionally adjust padding if needed */
+  color: #ffffff; /* Set the text color to your preference */
+  cursor: pointer;
+  
+}.close-button-container {
   position: absolute;
-  color:white;
-  margin-top: -2% ;
-  margin-left: 60%;
+  top: 464px; /* Adjust the top position as needed */
+  left: 490px; /* Adjust the right position as needed */
+}
 
-
-
-}.custom-box {
+.custom-box {
   width: 1100px; 
   height: 360px; 
   background-color: white; 

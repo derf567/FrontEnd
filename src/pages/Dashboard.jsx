@@ -46,10 +46,18 @@ function Dashboard() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPopUpShown, setPopUpShown] = useState(false);
   const [isViewDetailsClicked, setViewDetailsClicked] = useState(false);
-
+  const [eventName, setEventName] = useState('');
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [events, setEvents] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  
+ {/* Inplace until here 
   const showSampleToast = () => {
     toast.current.show({ severity: 'success', summary: 'Success', detail: 'Sample Toast Message' });
-  };
+  };*/}
 
   const handleTabChange = (event) => {
     // Update the activeIndex when the tab changes
@@ -66,6 +74,24 @@ function Dashboard() {
   setAboutClicked(false)
 
   showSampleToast();
+
+    setEventName('');
+    setDateFrom('');
+    setDateTo('');
+    setSelectedDepartment([]);
+    setSelectedLocation('');
+
+    const newEvent = {
+      id: events.length + 1, // Assuming you have a unique identifier
+      eventName,
+      dateFrom,
+      dateTo,
+      selectedDepartment,
+      selectedLocation,
+    };
+  
+    setEvents([...events, newEvent]);
+    showDashboardToast('Event created successfully');
   
 
   }; const showDashboardToast = () => {
@@ -81,7 +107,7 @@ function Dashboard() {
     const clickedRowData = event.data;
     showDashboardToast();
   
-    console.log('Clicked Row Data:', clickedRowData);
+    showDashboardToast(`Clicked Row Data: ${JSON.stringify(clickedRowData)}`);
   };
 
   const handleSelectionChange = (e) => {
@@ -99,7 +125,7 @@ function Dashboard() {
   
  
   const [rowClick, setRowClick] = useState(/* initial value here */);
-  const [selectedProducts, setSelectedProducts] = useState([]);
+ 
   const manuallyDefinedData = [
     { id: 1, event: 'Intramurals',from:'11-20-23', date: '11-24-2023', cat: 'Bonifacio', dep: 'Higher Ed' },
     { id: 2, event: 'CCS Nights',from:'11-20-23', date: '02-11-2024', cat: 'Main(Bangke)', dep: 'CSS' },
@@ -394,6 +420,7 @@ function Dashboard() {
     { name: 'CPC', code: '002' },
     { name: 'MLS', code: '003' },
     { name: 'CABE', code: '004' },
+    { name: 'Higher Ed', code: '005' },
    
   ];
   
@@ -457,7 +484,7 @@ function Dashboard() {
            <h4>Event Name:</h4>
             
             <div className='searchh'>
-            <InputText value={value} onChange={(e) => setValue(e.target.value)} />
+            <InputText value={eventName} onChange={(e) => setEventName(e.target.value)} />
             </div>
           </div>
 
@@ -465,32 +492,32 @@ function Dashboard() {
           <div className='mango'>
             <h4>Date From:</h4>
             <div className='oums'>
-            <InputText value={value} onChange={(e) => setValue(e.target.value)} />
+            <InputText value={dateFrom} onChange={(e) => setDateFrom(e.target.value)} />
             </div>
           </div>
 
           <div className='milk'>
             <h4>Date to:</h4>
             <div className='yum'>
-            <InputText value={value} onChange={(e) => setValue(e.target.value)} />
+            <InputText value={dateTo} onChange={(e) => setDateTo(e.target.value)} />
             </div>
           </div>
 
           <div className ='loc'>
-  <h4>Department:</h4>
-  <div className='loc1'> 
-    <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={cities} optionLabel="name" 
-      placeholder="Select Department " maxSelectedLabels={3} className="w-full md:w-20rem" />
-  </div>
-</div>
+          <h4>Department:</h4>
+          <div className='loc1'> 
+         <MultiSelect value={selectedDepartment} onChange={(e) => setSelectedDepartment(e.value)} options={cities} optionLabel="name" 
+         placeholder="Select Department " maxSelectedLabels={3} className="w-full md:w-20rem" />
+         </div>
+        </div>
 
-<div className='dep'>
-  <h4>Location:</h4>
-  <div className='loc1'> 
-    <MultiSelect value={selectedCities} onChange={(e) => setSelectedCities(e.value)} options={location} optionLabel="name" 
-      placeholder="Select Location " maxSelectedLabels={3} className="w-full md:w-20rem" />
-  </div>
-</div>
+        <div className='dep'>
+        <h4>Location:</h4>
+        <div className='loc1'> 
+        <MultiSelect value={selectedLocation} onChange={(e) => setSelectedLocation(e.value)} options={location} optionLabel="name" 
+        placeholder="Select Location " maxSelectedLabels={3} className="w-full md:w-20rem" />
+        </div>
+        </div>
        </div>
          <div className='save'>
           <Button label="Save"  rounded className="customButton" />  
@@ -501,8 +528,8 @@ function Dashboard() {
           <Button icon="pi pi-times" severity="danger" aria-label="Cancel" className="customCancelButton" />
           </div>
 
-          <div className='close'>
-            <p>Close</p>
+          <div className='close-button-container '>
+          <Button label="Close"  onClick={() => setShowDialog(false)} className='customCloseButton' />
           </div>
 
 
@@ -562,8 +589,7 @@ function Dashboard() {
 
       </div>
       
-     
-     <DataTable value={manuallyDefinedData} className="custom-table"selectionMode="multiple" selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} dataKey="id" tableStyle={{ minWidth: '50rem' }}  onRowClick={(e) => handleRowClick(e)}>
+      <DataTable value={manuallyDefinedData} className="custom-table"selectionMode="multiple" selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} dataKey="id" tableStyle={{ minWidth: '50rem' }}  onRowClick={(e) => handleRowClick(e)}>
     <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
     <Column field="event" header="Event Name"></Column>
     <Column field="from" header="Date From"></Column>
@@ -571,6 +597,7 @@ function Dashboard() {
     <Column field="cat" header="Location"></Column>
     <Column field="dep" header="Department"></Column>
     </DataTable>
+
 
     <Dialog
     visible={showDialog}
