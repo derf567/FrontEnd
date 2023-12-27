@@ -123,7 +123,22 @@ position: absolute;
 }
 #Button4{
   margin-top: 600px;
-  margin-left: 120px;
+  margin-left: 1300px;
+  width: 150px; 
+  height: 40px; 
+  background-color: #D2334C; 
+  border-color: #D2334C; 
+}#Button5{
+  margin-top: 50px;
+  margin-left: 1300px;
+  width: 150px; 
+  height: 40px; 
+  background-color: #D2334C; 
+  border-color: #D2334C; 
+}#Button6{
+ 
+  margin-top: -200px;
+  margin-left: 1300px;
   width: 150px; 
   height: 40px; 
   background-color: #D2334C; 
