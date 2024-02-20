@@ -33,7 +33,7 @@ import { Toast } from 'primereact/toast';
 function Dashboard() {
   const [count, setCount] = useState(0);
   const [isCreateEventClicked, setCreateEventClicked] = useState(false);
-  const [isDashboardClicked, setDashboardClicked] = useState(false);
+  const [isDashboardClicked, setDashboardClicked] = useState(true);
   const [isCalendarClicked, setCalendarClicked] = useState(false);
   const [isGenerateReportsClicked, setGenerateReportsClicked] = useState(false);
   const [isAboutClicked, setAboutClicked] = useState(false);
