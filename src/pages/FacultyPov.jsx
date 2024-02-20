@@ -641,7 +641,8 @@ function FacultyPov() {
       <p className='day'>Ready to start your day?</p>
 
       </div>
-      <img className='girl' src={girl} alt="" />
+
+      {/* <img className='girl' src={girl} alt="" />*/}
 
       <div className='minji'> 
       <h3>Events </h3>
@@ -769,9 +770,6 @@ function FacultyPov() {
                  
                  </DataTable>
 </div>
-
-
-
 
 
                   </div>
