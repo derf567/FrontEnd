@@ -120,29 +120,29 @@ position: absolute;
   top: 48%;
   left: 50%;
 
+
 }
 #Button4{
-  margin-top: 600px;
-  margin-left: 1300px;
-  width: 150px; 
-  height: 40px; 
-  background-color: #D2334C; 
-  border-color: #D2334C; 
+  width: 120px;
+  position: absolute;
+  background-color: #D2334C;
+  color: #ffffff;
+  top: 12px; 
+  left: -80px;
 }#Button5{
-  margin-top: 50px;
-  margin-left: 1300px;
-  width: 150px; 
-  height: 40px; 
-  background-color: #D2334C; 
-  border-color: #D2334C; 
+  width: 120px;
+  position: absolute;
+  background-color: #D2334C;
+  color: #ffffff;
+  top: 14px; 
+  left: -80px;
 }#Button6{
- 
-  margin-top: -200px;
-  margin-left: 1300px;
-  width: 150px; 
-  height: 40px; 
-  background-color: #D2334C; 
-  border-color: #D2334C; 
+  width: 120px;
+  position: absolute;
+  background-color: #D2334C;
+  color: #ffffff;
+  top: 14px; 
+  left:-80px;
 }
 
 
@@ -156,15 +156,15 @@ position: absolute;
   position: absolute;
   justify-content: center;
   align-items: center;
-  margin-top: 26px;
+  margin-top: -20px;
   left: 2%; 
   transform: translateX(23%); 
   
 }
 
 .Calendar-container .p-calendar {
-  width: 650px; 
-  height: 360px; 
+  width: 950px; 
+  height: 660px; 
   top: 89px;
   left:700px;
 }.container {
@@ -189,8 +189,8 @@ position: absolute;
 
 .can{
   position:absolute;
-  margin-top: 8%;
-  margin-left:50%;
+  margin-top: 3%;
+  margin-left:20%;
   color:#695E5E
 }
 
@@ -638,10 +638,7 @@ overflow: hidden;
   position: absolute;
 
 
-}.Toome{
-  margin-left: 22.7%;
-  margin-top: -32.8%;
-  position: absolute;
+
 
 }.Thurs{
   margin-left: 2%;
@@ -657,10 +654,10 @@ overflow: hidden;
 }
 
 div.Calendar-container .p-calendar {
-  width: 650px; 
+  width: 850px; 
   height: 500px; 
   top: 200px;
-  left: 700px;
+  left: 200px;
   
 }.event{
   position: absolute;

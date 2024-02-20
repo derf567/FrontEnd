@@ -8,7 +8,7 @@ import './Dashboard.css';
 import { Button } from 'primereact/button';
 import logo from './img/logo.png';
 import icon from './img/icon.png';
-import pic from './img/pic.png';
+
 import banner from './img/banner.png';
 import gab from './img/gab.png';
 import micah from './img/micah.png';
@@ -637,13 +637,6 @@ function Dashboard() {
        <h4 className='Thurs'>Thursday</h4>
        </div>*/}
 
-       <img className='pic' src={pic} alt="" /> 
- 
-       <div className='Toome'>
-       <h4 >,02 November 2023</h4>
-       </div>
- 
-       
        <div className='can'>
          <h3>Calendar</h3>
        </div>
@@ -652,13 +645,13 @@ function Dashboard() {
        <Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek onSelect={(e) => handleDateClick(e.value)} />
        </div>
  
-       <div className='libog'>
-        <h3>Schedule, Event</h3>
-       </div>
+       {/*<div className='libog'>
+        <h1>Schedule| Event</h1>
+       </div>*/}
  
        
  
-      <Tree value={nodes} expandedKeys={expandedKeys} onToggle={(e) => setExpandedKeys(e.value)} className="w-full md:w-30rem" />
+            {/* <Tree value={nodes} expandedKeys={expandedKeys} onToggle={(e) => setExpandedKeys(e.value)} className="w-full md:w-30rem" />*/}
  
       <div className="calendar-content flex justify-content-center">
        </div>

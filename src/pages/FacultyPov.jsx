@@ -8,7 +8,7 @@ import './Dashboard.css';
 import { Button } from 'primereact/button';
 import logo from './img/logo.png';
 import icon from './img/icon.png';
-import pic from './img/pic.png';
+
 import banner from './img/banner.png';
 import gab from './img/gab.png';
 import micah from './img/micah.png';
@@ -34,9 +34,12 @@ import {useNavigate} from 'react-router-dom';
 function FacultyPov() {
   const navigate = useNavigate();
 
-
+  
+  const handleOpenButtonClick = () => {
+    window.open('https://docs.google.com/document/d/1uaq07O--Vau9sfUzNA9N0mmJAGX28RJZh3Son-YVtwQ/edit?usp=sharing', '_blank');
+  };
   const handleStartEventClick = () => {
-    // Your logic for handling the login click
+  
     navigate('/Tapid');
   };
 
@@ -603,19 +606,29 @@ function FacultyPov() {
       <div className='cnight'> 
         <p>CSS Nights</p>
       </div>
+
+
+      
       <div className="card flex justify-content-center">
-            <Button id='Button1' label="Open" severity="danger" />
-          </div>
+      <Button onClick={handleOpenButtonClick} id='Button1' label="Open" severity="danger" />
+      </div>
+
           <div className="card2 flex justify-content-center">
-            <Button id='Button2' label="Open" severity="danger" />
+            <Button onClick={handleOpenButtonClick} id='Button2' label="Open" severity="danger" />
           </div>
           <div className="card3 flex justify-content-center">
-            <Button id='Button3' label="Open" severity="danger" />
+            <Button onClick={handleOpenButtonClick} id='Button3' label="Open" severity="danger" />
           </div>
-          
-          <Button onClick={handleStartEventClick} id='Button4' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
-          <Button onClick={handleStartEventClick} id='Button5' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
-          <Button onClick={handleStartEventClick} id='Button6' label="Start Event" severity="help" box style={{ backgroundColor: '#D2334C', borderColor: '#D2334C' }} />
+          <div className="card4 flex justify-content-center">
+            <Button id='Button4' label="Start Event" severity="danger" />
+        </div>
+
+        <div className="card5 flex justify-content-center">
+            <Button id='Button5' label="Start Event" severity="danger" />
+        </div>
+        <div className="card6 flex justify-content-center">
+            <Button id='Button6' label="Start Event" severity="danger" />
+        </div>
           
        <img className='userr' src={userr} alt="" />
        <div className='logout'>
@@ -644,7 +657,7 @@ function FacultyPov() {
         <div className='logout'>
        <TieredMenu model={items} breakpoint="767px" />
        </div>
-       <img className='pic' src={pic} alt="" /> 
+      
  
        <div className='Toome'>
        <h4 >,02 November 2023</h4>
