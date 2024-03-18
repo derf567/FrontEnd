@@ -8,7 +8,11 @@
   position: relative; /* Add this to establish a positioning context */
 }
 
-
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
 
 .new-component {
   position: absolute; 
