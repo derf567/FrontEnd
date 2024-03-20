@@ -23,19 +23,40 @@ function Login() {
   const [value, setValue] = useState('');
   const [valuePass, setPass] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [valueName, setName] = useState('');
-  const [valueEmail, setEmail] = useState('');
+  const [attemptCount, setAttemptCount] = useState(0);
 
 
-  const handleloginClick = () => {
-      if (!value || !valuePass) {
-          setErrorMessage('Invalid username and password');
-      } else {
-          // Implement your login logic here
-          // For example, navigate to the Dashboard if credentials are valid
-          navigate('/Dashboard');
-      }
-  };
+    const handleloginClick = () => {
+        // Get the username and password values from your input fields
+        const username = value.trim(); // Use the state value instead of directly accessing DOM
+        const password = valuePass.trim(); // Use the state value instead of directly accessing DOM
+        setAttemptCount(prevCount => prevCount + 1);
+
+
+        if (attemptCount >= 5) {
+            setErrorMessage('Maximum attempts reached. Please try again later.');
+            return;
+          }
+        // Check for different scenarios
+        if (username === "" || password === "") {
+            setErrorMessage('Please fill in all fields');
+        } else if (username === "123" && password === "123") {
+            // If the username and password are correct, navigate to the dashboard
+            navigate('/dashboard');
+        } else if (username.toLowerCase() === "@123" && password === "@123") {
+            // If the username and password are correct (case-insensitive), show an error message
+            setErrorMessage('ID and password are case sensitive. Please enter correct values.');
+        } else {
+            // If the username and password are incorrect and attempt count is less than 5, show an error message
+            if (attemptCount < 5) {
+              setErrorMessage('Invalid ID or password');
+            } else {
+              // If the attempt count exceeds 5, show a maximum attempt error message
+              setErrorMessage('Maximum attempts reached. Please try again later.');
+            }
+        }   
+    };
+
     const items = [
         {
             label: <div className='navbar-text'>Home </div>,
