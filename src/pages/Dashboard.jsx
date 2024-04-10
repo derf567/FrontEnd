@@ -582,6 +582,7 @@ function Dashboard() {
       <p className='day'>Ready to start your day?</p>
 
       </div>
+      
       <img className='girl' src={girl} alt="" />
 
       <div className='minji'> 

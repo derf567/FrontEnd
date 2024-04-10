@@ -519,12 +519,12 @@ color:#443838
 
 }.ivy{
 position: absolute;
-top: 31%;
+top: 50%;
 left: 51%;
 transform: translate(-50%, -50%);
 width: 1180px; 
 height: 238px; 
-background-color: #D2334C;
+background-color: #0a0707;
 border-radius: 10px; 
 overflow: hidden;
 }.girl{
@@ -730,6 +730,188 @@ margin-top: -5%;
 margin-left: 22%;
 color:#695E5E;
 }
+
+
+@media (max-width: 1810px) {
+  
+    .minji{
+      position: absolute;
+      margin-top: -3%;
+      margin-left: 22%;
+      color:#695E5E;
+      }
+}@media (max-width: 1726px) {
+  .ivy{
+    position: absolute;
+    top: 31%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 1180px; 
+    height: 238px; 
+    background-color: #000000;
+    border-radius: 10px; 
+    overflow: hidden;
+}}@media (max-width: 1718px) {
+  .minji{
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 22%;
+    color:#695E5E;
+}}@media (max-width: 1718px) {
+  .custom-table {
+      width: 50%;
+      margin-top: 33%;
+      margin-left: 23%;
+      
+}}@media (max-width: 1484px) {
+  .minji{
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 22%;
+    color:#695E5E;
+} /*.ivy {
+    position: absolute;
+    top: 22%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 238px;
+    background-color: #D2334C;
+    border-radius: 10px;
+    overflow: hidden;*/
+
+}@media (max-width: 1484px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 36%;
+    margin-left: 23%;
+    
+}}@media (max-width: 1342px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 41%;
+    margin-left: 23%;
+}}@media (max-width: 1261px) {
+  .ivy {
+    position: absolute;
+    top: 22%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 238px;
+    background-color: #D2334C;
+    border-radius: 10px;
+    overflow: hidden;
+}}@media (max-width: 1284px) {
+  .minji{
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 22%;
+    color:#695E5E;
+}}@media (max-width: 1284px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 40%;
+    margin-left: 23%;
+    
+}}@media (max-width: 1261px) {
+  .minji{
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 22%;
+    color:#695E5E;
+}}@media (max-width: 1261px) {
+  .custom-table {
+      width: 50%;
+      margin-top: 37%;
+      margin-left: 23%;
+      
+}}@media (max-width: 1222px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 45%;
+    margin-left: 23%;
+}}@media (max-width: 1059px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 51%;
+    margin-left: 23%;
+}}@media (max-width: 953px) {
+  .custom-table {
+    width: 50%;
+    margin-top: 57%;
+    margin-left: 23%;
+}}@media (max-width: 953px) {
+  .minji{
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 22%;
+    color:#695E5E;
+}}@media (max-width: 802px) {
+  .custom-table {
+    width: 65%;
+    margin-top: 74%;
+    margin-left: 33%;
+  }}@media (max-width: 802px) {
+    .minji{
+      position: absolute;
+      margin-top: -9%;
+      margin-left: 33%;
+      color:#695E5E;
+  }}@media (max-width: 611px) {
+    .custom-table {
+      width: 65%;
+      margin-top: 92%;
+      margin-left: 33%;
+  }}@media (max-width: 525px) {
+    .custom-table {
+      width: 65%;
+      margin-top: 109%;
+      margin-left: 50%;
+  }}@media (max-width: 525px) {
+    .minji{
+      position: absolute;
+      margin-top: -9%;
+      margin-left: 50%;
+      color:#695E5E;
+  }}@media (max-width: 428px) {
+    .custom-table {
+      width: 65%;
+      margin-top: 130%;
+      margin-left: 50%;
+  }}
+
+
+  
+
+/* Generate Report*/
+  @media (max-width: 1586px) {
+    .pink-box {
+      position: absolute;
+      top: 53%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      width: 1000px; 
+      height: 750px; 
+      background-color: #D2334C;
+      border-radius: 10px; 
+      overflow: hidden;  
+    
+  }} @media (max-width: 1544px) {
+    .pink-box {
+      position: absolute;
+      top: 53%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      width: 100px; 
+      height: 750px; 
+      background-color: #D2334C;
+      border-radius: 10px; 
+      overflow: hidden;  
+    
+  }}
+  
+  
 
 
 
